@@ -1,0 +1,724 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    margin: 0;
+    line-height: 1.6;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #8da7ff;
+    outline-offset: 3px;
+}
+
+
+
+
+.site-header {
+    background-color: #1f3c88;
+    color: white;
+    padding: 18px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo h1 {
+    font-size: 25px;
+    margin: 0;
+    color: white;
+}
+
+.logo p {
+    margin: 0;
+    font-size: 14px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 5px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin: 30px 0;
+    padding: 40px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    color: #1f3c88;
+    font-size: 29px;
+    margin: 0 0 8px;
+}
+
+.section-heading p {
+    color: #666;
+    margin: 0;
+}
+
+
+
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.primary-button {
+    background-color: #1f3c88;
+    color: white;
+    padding: 11px 20px;
+    border: none;
+}
+
+.primary-button:hover {
+    background-color: #162d68;
+}
+
+.secondary-button {
+    background-color: #eef3ff;
+    color: #1f3c88;
+    padding: 10px 17px;
+    border: 1px solid #cbd7f5;
+}
+
+.secondary-button:hover {
+    background-color: #dfe8ff;
+}
+
+.form-button {
+    margin-top: 10px;
+}
+
+
+
+
+.hero {
+    background-color: #eaf1ff;
+    padding: 65px;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 780px;
+}
+
+.hero-tag {
+    color: #1f3c88;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin: 0;
+}
+
+.hero h2 {
+    color: #1f3c88;
+    font-size: 44px;
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.hero p:not(.hero-tag) {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+
+
+
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.subject-card {
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.subject-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.14);
+}
+
+.card-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eef3ff;
+    color: #1f3c88;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.subject-card h3 {
+    color: #1f3c88;
+    margin-bottom: 8px;
+}
+
+.subject-card p {
+    line-height: 1.6;
+}
+
+.card-info {
+    color: #666;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+
+
+
+.learning-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 25px;
+    background-color: #f8faff;
+    border: 1px solid #d8e1f2;
+    border-radius: 10px;
+}
+
+.learning-info {
+    flex: 2;
+}
+
+.learning-info h3 {
+    color: #1f3c88;
+    margin: 5px 0 10px;
+}
+
+.learning-info p {
+    line-height: 1.5;
+}
+
+.learning-info .secondary-button {
+    margin-top: 8px;
+}
+
+.learning-status {
+    flex: 1;
+    min-width: 220px;
+}
+
+.status-label {
+    margin: 5px 0 10px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #dfe5ed;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background-color: #1f3c88;
+    transition: width 0.4s ease;
+}
+
+.progress-text {
+    font-size: 13px;
+    color: #666;
+}
+
+
+
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.topic-card {
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #f5f0ff;
+    border: 1px solid #ddd;
+}
+
+.topic-card h3 {
+    color: #1f3c88;
+}
+
+.topic-card li {
+    margin: 10px 0;
+}
+
+
+
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.note-card {
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f0fff5;
+    display: flex;
+    flex-direction: column;
+}
+
+.note-card h3 {
+    color: #24734d;
+    margin: 7px 0;
+}
+
+.note-card p {
+    line-height: 1.6;
+}
+
+.note-card .secondary-button {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.note-label,
+.subject-name {
+    color: #24734d;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.note-points {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.note-points li {
+    margin: 7px 0;
+}
+
+
+
+
+.quiz-form {
+    width: 100%;
+}
+
+.quiz-form fieldset {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 25px 30px;
+    background-color: #fffaf0;
+    margin-bottom: 20px;
+}
+
+.quiz-form legend {
+    color: #1f3c88;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.quiz-option {
+    margin: 14px 0;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.quiz-option:hover {
+    background-color: #f3f5f8;
+}
+
+.quiz-option input {
+    margin-right: 8px;
+}
+
+.quiz-option label {
+    cursor: pointer;
+}
+
+.quiz-result {
+    display: none;
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.quiz-result.show {
+    display: block;
+}
+
+.quiz-result.success {
+    background-color: #eaf8ef;
+    color: #24734d;
+    border: 1px solid #b8dfc8;
+}
+
+.quiz-result.warning {
+    background-color: #fff8e8;
+    color: #a66a00;
+    border: 1px solid #ead29c;
+}
+
+.quiz-result.error {
+    background-color: #ffecec;
+    color: #c0392b;
+    border: 1px solid #edb8b8;
+}
+
+
+
+.student-form {
+    width: 100%;
+}
+
+.student-form fieldset {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.student-form legend {
+    color: #1f3c88;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 11px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #1f3c88;
+}
+
+.full-width {
+    margin-top: 20px;
+}
+
+.form-message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+
+
+
+.progress-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.progress-card {
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.progress-card h3 {
+    margin-top: 8px;
+}
+
+.progress-card p {
+    color: #555;
+}
+
+.progress-card.strong {
+    background-color: #eaf8ef;
+}
+
+.progress-card.average {
+    background-color: #fff8e8;
+}
+
+.progress-card.weak {
+    background-color: #ffecec;
+}
+
+.progress-card.strong h3 {
+    color: #24734d;
+}
+
+.progress-card.average h3 {
+    color: #a66a00;
+}
+
+.progress-card.weak h3 {
+    color: #c0392b;
+}
+
+.progress-card li {
+    margin: 8px 0;
+}
+
+.status-icon {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    background-color: white;
+}
+
+
+
+
+.assessment-card {
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #eef8ff;
+    border: 1px solid #cddfea;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.assessment-card h3 {
+    color: #1f3c88;
+    margin: 0 0 8px;
+}
+
+.assessment-card p {
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+.assessment-icon {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: white;
+    color: #1f3c88;
+    font-weight: bold;
+}
+
+
+
+
+footer {
+    background-color: #1f3c88;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 6px;
+    font-size: 14px;
+}
+
+
+
+
+@media (max-width: 900px) {
+
+    .subject-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .topic-grid,
+    .notes-grid,
+    .progress-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .learning-info,
+    .learning-status {
+        width: 100%;
+    }
+
+    .learning-status {
+        min-width: 0;
+    }
+
+}
+
+
+
+
+@media (max-width: 600px) {
+
+    main {
+        width: 94%;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    .site-header {
+        padding: 15px 3%;
+    }
+
+    .logo {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        padding: 6px 4px;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 35px 25px;
+        min-height: 300px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero p:not(.hero-tag) {
+        font-size: 15px;
+    }
+
+    .subject-grid,
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quiz-form fieldset,
+    .student-form fieldset {
+        padding: 20px;
+    }
+
+    .assessment-card {
+        flex-direction: column;
+    }
+
+    .primary-button,
+    .secondary-button {
+        text-align: center;
+    }
+
+}
